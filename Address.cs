@@ -12,7 +12,7 @@ namespace AddressBook
         List<Contact> conta = new List<Contact>();
         public void AddContact(Contact contact)
         {
-            conta.Add(contact);
+            conta.Add(contact);//listname.Add(value - we want to assign)
             Display();
         }
         public void Display()
@@ -67,6 +67,19 @@ namespace AddressBook
                     Display();
                 }
             }
+        }
+       
+        public void DeleteContact(string name)
+        {
+            Contact delete = new Contact();
+            foreach (var contact in conta)
+            {
+                if (contact.FirstName == name)
+                {
+                    delete = contact;
+                }
+            }
+            conta.Remove(delete);
         }
     }
 }

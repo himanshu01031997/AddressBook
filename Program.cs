@@ -10,7 +10,7 @@
             Address address = new Address();
             while (flag)
             {
-                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit");
+                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit\n3.Delete\n");
                 int Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
                 {
@@ -42,10 +42,20 @@
                         break;
 
                     case 2:
-                        Console.WriteLine("enter firstname to edit");
+                        Console.WriteLine("enter firstname to edit");//we want to edit through first name
                         string FirstName = Console.ReadLine();
                         address.EditContact(FirstName);
                         break;
+                    case 3:
+                        Console.WriteLine("Enter First name to delete");
+                        string firstName = Console.ReadLine();
+                        Console.WriteLine("------------------------------------\n");
+                        Console.WriteLine("Display After Delete Contact");
+                        Console.WriteLine("------------------------------------\n");
+                        address.DeleteContact(firstName);
+                        address.Display();
+                        break;
+
                     default:
                        Console.WriteLine("invalid choice");
                         break;
