@@ -30,7 +30,7 @@ namespace AddressBook
                 {
                     Console.WriteLine("-----------------------------\n");
                     Console.WriteLine("Enter The Option Which You Can Edit : ");
-                    Contact contact1 = new Contact();
+                    Console.WriteLine("1.Lastname\n2.Address\n3.City\n4.State\n5.Zip\n6.Phoneno\n7.Email");
                     int option = Convert.ToInt32(Console.ReadLine());
                     switch (option)
                     {
@@ -63,10 +63,10 @@ namespace AddressBook
                             contact.Email = Console.ReadLine();
                             break;
                     }
-                    Console.WriteLine("------- Edited Contact List --------");
+                    Console.WriteLine("------- Edited Contact  List --------");
                     Display();
                 }
             }
         }
-    } 
+    }
 }
