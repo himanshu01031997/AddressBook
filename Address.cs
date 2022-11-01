@@ -91,5 +91,20 @@ namespace AddressBook
                 Console.WriteLine(contact);
             }
         }
+        public void MultipleAddressBook()
+        {
+            Dictionary<string, List<Contact>> contacts = new Dictionary<string, List<Contact>>();
+            Console.WriteLine("enter the no of book you want:");
+            int a = Convert.ToInt32(Console.ReadLine());
+            while(a > 0)
+            {
+                Console.WriteLine("enter the name of the addressbook:");
+                string name=Console.ReadLine();
+                contacts.Add(name, conta);
+                a--;
+            }
+            
+
+        }
     }
 }

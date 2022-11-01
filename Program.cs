@@ -10,7 +10,7 @@
             Address address = new Address();
             while (flag)
             {
-                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit\n3.Delete\n4.Add Multiple");
+                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit\n3.Delete\n4.Add Multiple\n5.multiple AddressBook");
                 int Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
                 {
@@ -61,6 +61,12 @@
                         address.AddMultiple("himanshu", "singh", "bsnl", "bsp", "cg", 234234, "63663", "jshjdjs");
                         address.Display();
                         break ;
+                    case 5:
+
+                        address.MultipleAddressBook();
+                        address.Display();
+
+                        break;
 
                     default:
                        Console.WriteLine("invalid choice");
