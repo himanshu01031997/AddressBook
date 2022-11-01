@@ -10,7 +10,7 @@
             Address address = new Address();
             while (flag)
             {
-                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit\n3.Delete\n");
+                Console.WriteLine("Please Enter the Choice :\n1.Add\n2.Edit\n3.Delete\n4.Add Multiple");
                 int Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
                 {
@@ -55,6 +55,12 @@
                         address.DeleteContact(firstName);
                         address.Display();
                         break;
+                    case 4:
+                        Console.WriteLine("add multiple contact:");
+                        address.AddMultiple("ram", "singh", "bsnl", "bsp", "cg", 234234, "63663", "jshjdjs");
+                        address.AddMultiple("himanshu", "singh", "bsnl", "bsp", "cg", 234234, "63663", "jshjdjs");
+                        address.Display();
+                        break ;
 
                     default:
                        Console.WriteLine("invalid choice");

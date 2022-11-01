@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -80,6 +82,14 @@ namespace AddressBook
                 }
             }
             conta.Remove(delete);
+        }
+        public void AddMultiple(string firstname, string secondname, string Address, string city, string state, int zip, string phoneno, string email)
+        {
+            conta.Add(new Contact { FirstName = firstname, LastName = secondname, Address = Address,City=city, State=state, Zip=zip, Phoneno=phoneno, Email=email });
+            foreach(var contact in conta)
+            {
+                Console.WriteLine(contact);
+            }
         }
     }
 }
